@@ -1,0 +1,93 @@
+.sec-1{
+    text-align: center;
+    justify-content: space-evenly;
+    padding: 3%;
+}
+
+.sec-1 .pic img{
+    width: 300px;
+    height: 200px;
+}
+
+.cards .card{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+#section-2 .grid{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+}
+
+.grid .nested{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+.grid .item{
+    background-color: rgb(233,236,239);
+}
+
+.img{
+    max-width: 100%;
+    max-height: 200px;
+    /*Use this to make fit the image in the container, but there will be extra space left at the bottom for smaller images*/
+    height: auto;                   
+
+    /*Use this to fill the entire container with the image, which can cause uneven sizing of images and smaller images may stretch to fill the gap */
+    /* height: -webkit-fill-available; */ 
+    
+}
+
+@media screen and (max-width: 480px){
+    .sec-1{
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards{
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .cards .card{
+        width: 100%;
+    }
+
+    #foot .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 980px) {
+    .navbar{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .sec-1{
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+    .cards{
+        justify-content: space-around;
+    }
+    .cards .card{
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 981px) {
+    .cards{
+        justify-content: space-around;
+    }
+    .cards .card{
+        width: 30%;
+    }
+}
